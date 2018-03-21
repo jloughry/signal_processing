@@ -1,0 +1,20 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac crap
+.DS_Store
+
+# Specific to this project
+
+Signal_Processing_paper.pdf
+Signal_Processing_slides.pdf
+
+commit_message.txt
+

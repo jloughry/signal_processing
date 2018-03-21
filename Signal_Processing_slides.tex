@@ -1,0 +1,77 @@
+% 3456789012345678901234567890123456789012345678901234567890123456789012
+%        1         2         3         4         5         6         7
+%
+% Format: LaTeX
+%
+% For information about this file, contact the author by email at
+% Joe.Loughry@cs.du.edu or mailto:Joe.Loughry@gmail.com or by telephone
+% at +1 720 277 7800 (time zone GMT minus 7 hours).
+%
+
+\documentclass{beamer}
+
+\usepackage{hyperref}
+\usepackage{url}
+% \newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
+
+%
+% end of preamble
+%
+
+\title{\input{title.tex}}
+\author{Joe Loughry \\
+	\url{mailto:joe.loughry@stx.ox.ac.uk}}
+
+\institute{Department of Computer Science, University of Oxford \\
+	Wolfson Building, Parks Road, Oxford, OX1 3QD, UK}
+\date{Name of Conference \\ City, Date}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	\vfill
+	{\tiny Build \input{slides_build_counter.txt}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Topics}
+	\begin{enumerate}
+		\item Some
+		\item Stuff
+		\item Goes
+		\item Here
+		\item Summary and Conclusion
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{This is a slide with a single large graphic}
+	% trim is left, bottom, right, top of a US-letter page for this particular graphic.
+	\includegraphics[width=0.5\textwidth,trim=0 0 117mm 183mm,clip]{graphics/ox_brand_cmyk_pos.pdf}
+	\begin{center}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{This is a regular slide}
+	\begin{itemize}
+		\item This is a list.
+			\begin{itemize}
+				\item This is a sub-list.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\vspace{1cm}
+		% trim is left, bottom, right, top of a US-letter page for this particular graphic.
+		\includegraphics[width=0.3\textwidth,trim=0 0 117mm 183mm,clip]{graphics/ox_brand_cmyk_pos.pdf}
+		\vfill
+		\url{mailto:joe.loughry@stx.ox.ac.uk}
+	\end{center}
+\end{frame}
+
+\end{document}
+

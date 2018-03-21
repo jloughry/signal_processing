@@ -1,0 +1,72 @@
+%
+% This is a template for a new research paper. For information on this file
+% please contact Joe Loughry at Tel. +1 720 277 7800 (time zone GMT minus 7
+% hours) or Email: Joe.Loughry@cs.du.edu or mailto:Joe.Loughry@gmail.com
+%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[english,british]{babel}
+\usepackage{graphicx}
+\usepackage[obeyspaces,hyphens]{url}
+\newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
+\usepackage[plainpages=false,pdfpagelabels]{hyperref}
+
+\begin{document}
+
+\title{\input{title.tex}}
+
+\author{Joe Loughry}
+
+\maketitle
+
+\begin{abstract}
+	\input{abstract.tex}
+\end{abstract}
+
+\section{Introduction}
+
+Some words go here.
+
+\subsection{This is a subsection}
+
+More words\ldots
+
+\newpage
+
+Some more words go here. See Figure \ref{figure:whatever}.
+
+\begin{figure}[!t]
+    \centering
+	% 'trim' specifies how much to remove from left, bottom, right, and top
+	% edges of an A4 size PDF page.
+	\includegraphics[width=0.3\textwidth,trim=0 0 117mm 183mm,clip]{graphics/ox_brand_cmyk_pos.pdf}
+	\caption{This is the caption.}
+	\label{figure:whatever}
+\end{figure}
+
+\section{Methodology}
+
+This is a reference \cite{Loughry2013a}.
+
+\section{Results}
+
+Words\ldots
+
+\section{Interpretation}
+
+Words\ldots
+
+\section{Summary and Conclusion}
+
+Words\ldots
+
+\section{Acknowledgements}
+
+More words\ldots
+
+\bibliographystyle{plain}
+\bibliography{consolidated_bibtex_file}
+
+\end{document}
+
