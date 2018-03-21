@@ -36,9 +36,9 @@ Makefile: common.mk
 common.mk:
 	ln -s ../Makefiles/common.mk
 
-graphics_for_paper = $(graphics_dir)/ox_brand_cmyk_pos.pdf
+graphics_for_paper =
 
-graphics_for_slides = $(graphics_dir)/ox_brand_cmyk_pos.pdf
+graphics_for_slides =
 
 $(paper_pdf_file): $(paper_sources) $(graphics_for_paper) Makefile
 	@echo $$(($$(cat $(paper_counter_file)) + 1)) > $(paper_counter_file)
