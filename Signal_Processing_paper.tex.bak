@@ -57,9 +57,9 @@ be information displayed on a computer screen or printed (Figure
 Like other devices included in a computer system [1, 2], the printer can be
 subject to electromagnetic infiltration, or eavesdropping [3, 4]. Therefore,
 efforts to reduce the level of susceptibility to electromagnetic
-eavesdropping initiated for such devices. Organisational and technical
+eavesdropping initiated for such devices. Organizational and technical
 solutions [5] are the most often-used methods for limiting infiltration
-sensitivity of devices.\footnote{An example of an organisational solution
+sensitivity of devices.\footnote{An example of an organizational solution
 might be establishment of a `control zone' around susceptible devices,
 relying on distance to attenuate signals below levels that can be received
 outside the control zone.} Technical solutions are limited to changes in the
