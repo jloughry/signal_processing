@@ -9,19 +9,29 @@
 
 \usepackage[english,british]{babel}
 \usepackage{graphicx}
+
 \usepackage[obeyspaces,hyphens]{url}
 \newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
 \usepackage[plainpages=false,pdfpagelabels]{hyperref}
-\usepackage{setspace}
-\usepackage{subfig}
-% for typesetting the Romanian S-comma \cb{}
-\usepackage{combelow}
+
+\usepackage{setspace} % for \doublespacing
+\usepackage{subfig} % for side-by-side subfigures
+\usepackage{combelow} % for typesetting the Romainian S-comma \cb{}
+\usepackage{authblk} % for author affiliations
 
 \begin{document}
 
 \title{\input{title.tex}}
 
-\author{Ireneusz Kubiak \and Joe Loughry}
+\author{Ireneusz Kubiak}
+\affil{Military Communication Institute, Warszawska 22A Str.,
+    05-130 Zegrze, Poland \URL{mailto:i.kubiak@wil.waw.pl}}
+\author{Joe Loughry}
+\affil{University of Denver, Ritchie School of Engineering and Computer
+    Science, 2155 East Wesley Avenue, Denver, CO 80208 USA
+    \URL{mailto:joe.loughry@cs.du.edu}}
+
+\date{}
 
 \maketitle
 
@@ -105,7 +115,7 @@ typical single and dual diode laser printers \cite{Kubiak2014b}.
 
 \singlespacing
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{consolidated_bibtex_file}
 
 \end{document}
