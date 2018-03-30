@@ -14,6 +14,8 @@
 \usepackage[plainpages=false,pdfpagelabels]{hyperref}
 \usepackage{setspace}
 \usepackage{subfig}
+% for typesetting the Romanian S-comma \cb{}
+\usepackage{combelow}
 
 \begin{document}
 
@@ -54,11 +56,12 @@ be information displayed on a computer screen or printed (Figure
     \label{figure:Figure_01}
 \end{figure}
 
-Like other devices included in a computer system [1, 2], the printer can be
-subject to electromagnetic infiltration, or eavesdropping [3, 4]. Therefore,
-efforts to reduce the level of susceptibility to electromagnetic
-eavesdropping initiated for such devices. Organisational and technical
-solutions [5] are the most often-used methods for limiting infiltration
+Like other devices included in a computer system \cite{Kuhn2002,Kubiak2016a},
+the printer can be subject to electromagnetic infiltration, or eavesdropping
+\cite{Ketenci2015a,Kubiak2016b}. Therefore, efforts to reduce the level of
+susceptibility to electromagnetic eavesdropping initiated for such devices.
+Organisational and technical solutions \cite{Kubiak2006a} are the most
+often-used methods for limiting infiltration
 sensitivity of devices.\footnote{An example of an organisational solution
 might be establishment of a `control zone' around susceptible devices,
 relying on distance to attenuate signals below levels that can be received
@@ -66,13 +69,14 @@ outside the control zone.} Technical solutions are limited to changes in the
 design of devices that typically increase the cost of such devices and
 sometimes limit their functionality. Therefore, it is desirable to find
 solutions that avoid these drawbacks and at the same time allow `safe'
-processing of classified information [6, 7].
+processing of classified information \cite{Wasfy2011a,Goel2012a}.
 
 One technical method that is commonly used in the field of electromagnetic
 compatibility---both to reduce the amount of electromagnetic interference
 emitted from the device and the susceptibility of the device to
 electromagnetic disturbance---is the use of differential signals. Analysis
-of useful signals and control signals [8] in the operation of LED arrays
+of useful signals and control signals \cite{Kubiak2017d} in the operation of
+LED arrays
 used in printers shows that such a design was used by the $B$ printer in the
 operation of its photoconductor exposure system. Is this sufficient, however,
 to foil non-invasive information gathering? Research and results are
@@ -80,21 +84,21 @@ presented in this article.
 
 \begin{figure*}[!t]
     \centering
-    \subfloat[Printer $A$]{\includegraphics[width=2.3in]{graphics/Figure" "02a.jpg}%
+    \subfloat[Printer $A$]{\includegraphics[width=2in]{graphics/Figure" "02a.jpg}%
     \label{figure:Figure_02a}}
     \hfil
-    \subfloat[Printer $B$]{\includegraphics[width=2.3in]{graphics/Figure" "02b.jpg}%
+    \subfloat[Printer $B$]{\includegraphics[width=2in]{graphics/Figure" "02b.jpg}%
     \label{figure:Figure_02b}}
     \caption{Two printers, $A$ and $B$, were tested for sensitive emissions.}
     \label{figure:Figure_02}
 \end{figure*}
 
 The clear answer is that the solution adopted in the design of the $B$
-printer (Figure \ref{figure:Figure_02b} significantly reduces the
+printer (Figure \ref{figure:Figure_02b}) significantly reduces the
 susceptibility of the device to infiltration, in comparison to the $A$
 printer (Figure \ref{figure:Figure_02a}). Moreover, the level of
 electromagnetic [emission?] of the $A$ printer is higher than that of
-typical single and dual diode laser printers [9].
+typical single and dual diode laser printers \cite{Kubiak2014b}.
 
 % Watch out that the combined width of all the subfigures on a
 % line do not exceed the text width or a line break will occur.
