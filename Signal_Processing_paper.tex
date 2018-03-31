@@ -19,6 +19,10 @@
 \usepackage{combelow} % for typesetting the Romainian S-comma \cb{}
 \usepackage{authblk} % for author affiliations
 \usepackage[binary-units]{siunitx} % for typesetting values with SI units
+\usepackage{caption} % for multi-paragraph captions, like Table 3
+
+\newlength{\oscope}
+\setlength{\oscope}{2.4in}
 
 \begin{document}
 
@@ -62,7 +66,7 @@ be information displayed on a computer screen or printed (Figure
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=2.5in]{graphics/Figure" "01.jpg}
+    \includegraphics[width=4in]{graphics/Figure" "01.jpg}
     \caption{Laser printer as a source of valuable emissions.}
     \label{figure:Figure_01}
 \end{figure}
@@ -108,7 +112,7 @@ The clear answer is that the solution adopted in the design of the $B$
 printer (Figure \ref{figure:Figure_02b}) significantly reduces the
 susceptibility of the device to infiltration, in comparison to the $A$
 printer (Figure \ref{figure:Figure_02a}). Moreover, the level of
-electromagnetic [emission?] of printer $A$ is higher than that of
+electromagnetic emission of printer $A$ is higher than that of
 typical single and dual diode laser printers \cite{Kubiak2014b}.
 
 \section{The Structure of the Emission Source and the Characteristics of
@@ -119,36 +123,38 @@ Different ways of controlling the LED array---chosen by the printer's
 designer---affect the number of useful signals (Figure
 \ref{figure:Figure_03}) and the structure of those signals. In the case of
 printer $A$ we can distinguish four useful signals and six control
-signals. The next ten wires are [ground?] wires. Printer $B$ has eight
+signals. The next ten wires are ground wires. Printer $B$ has eight
 useful signals (four differential pairs).
 
-\begin{figure*}[ht]
+\begin{figure*}[!ht]
     \centering
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "03a.jpg}%
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "03a.jpg}%
     \label{figure:Figure_03a}}
     \hfil
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "03b.jpg}%
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "03b.jpg}%
     \label{figure:Figure_03b}}
     \caption{Ribbon cable supplying useful signals to the LED array: (a)
         Printer $A$, (b) Printer $B$.}
     \label{figure:Figure_03}
 \end{figure*}
 
-The other signals are control wires and ground wires (thirty-two in all). By
-probing signal wires and exercising the printer, we were able to learn their
-structure, how the LED array is controlled, and how different print quality
+The other signals are control wires and ground wires (32 in all). By
+probing signal wires while exercising the printer, we were able to learn the
+structure of the control signals, how the LED array is controlled, and the
+way in which different print quality
 options are achieved depending on the operating mode and the ``toner save''
 option. Each of the tested printers uses different methods of controlling the
 LED array, which can affect the level of electromagnetic emanations. Examples
-of waveforms of useful and control signals for printer $A$ are presented
-in Figures \ref{figure:Figure_04}--\ref{figure:Figure_06}.
+of waveforms of useful and control signals for printer $A$ are shown
+in the oscilloscope traces of Figures
+\ref{figure:Figure_04}--\ref{figure:Figure_06}.
 
 \begin{figure*}[ht]
     \centering
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "04a.jpg}%
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "04a.jpg}%
     \label{figure:Figure_04a}}
     \hfil
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "04b.jpg}%
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "04b.jpg}%
     \label{figure:Figure_04b}}
     \caption{Waveforms of useful signals on pins 2 (lower trace) and 5
         (upper trace) of printer $A$ for: a) the 300\,dpi mode and the
@@ -157,39 +163,13 @@ in Figures \ref{figure:Figure_04}--\ref{figure:Figure_06}.
     \label{figure:Figure_04}
 \end{figure*}
 
-\begin{figure*}[ht]
-    \centering
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "05a.jpg}%
-    \label{figure:Figure_05a}}
-    \hfil
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "05b.jpg}%
-    \label{figure:Figure_05b}}
-    \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
-        trace) of printer $A$ for: a) the 600\,dpi mode and the Best
-        option, b) the 600\,dpi mode and the Eco option.}
-    \label{figure:Figure_05}
-\end{figure*}
-
-\begin{figure*}[ht]
-    \centering
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "06a.jpg}%
-    \label{figure:Figure_06a}}
-    \hfil
-    \subfloat[]{\includegraphics[width=2in]{graphics/Figure" "06b.jpg}%
-    \label{figure:Figure_06b}}
-    \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
-        trace) of printer $A$ for: a) the 1200\,dpi mode and the Best
-        option, b) the 1200\,dpi mode and the Eco option.}
-    \label{figure:Figure_06}
-\end{figure*}
-
 The structures of useful signals, based on the example of the signal on pin
 2, does not change for the 300\,dpi and 600\,dpi operating modes of the
 printer. In the case of the 1200\,dpi mode, the frequency of signal repetition
 increases by two. The amplitude is constant at approximately \SI{3.5}{\volt}
-(Table \ref{table:Table_1}).
+(Table~\ref{table:Table_1}).
 
-\begin{table}[ht]
+\begin{table}[t]
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
@@ -217,9 +197,35 @@ with the processed (printed) information is not affected by printing quality
 (resolution and toner save option), in contrast to the situation found with
 single and dual diode laser printers \cite{Kubiak2016b}.
 
+\begin{figure*}[ht]
+    \centering
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "05a.jpg}%
+    \label{figure:Figure_05a}}
+    \hfil
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "05b.jpg}%
+    \label{figure:Figure_05b}}
+    \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
+        trace) of printer $A$ for: a) the 600\,dpi mode and the Best
+        option, b) the 600\,dpi mode and the Eco option.}
+    \label{figure:Figure_05}
+\end{figure*}
+
+\begin{figure*}[ht]
+    \centering
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "06a.jpg}%
+    \label{figure:Figure_06a}}
+    \hfil
+    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "06b.jpg}%
+    \label{figure:Figure_06b}}
+    \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
+        trace) of printer $A$ for: a) the 1200\,dpi mode and the Best
+        option, b) the 1200\,dpi mode and the Eco option.}
+    \label{figure:Figure_06}
+\end{figure*}
+
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=2in]{graphics/Figure" "07.jpg}
+    \includegraphics[width=\oscope]{graphics/Figure" "07.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
         (upper trace) of printer $A$ for the 300\,dpi mode and the Best
         option.}
@@ -228,7 +234,7 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=2in]{graphics/Figure" "08.jpg}
+    \includegraphics[width=\oscope]{graphics/Figure" "08.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
         (upper trace) of printer $A$ for the 300\,dpi mode and the Eco
         option.}
@@ -237,7 +243,7 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=2in]{graphics/Figure" "09.jpg}
+    \includegraphics[width=\oscope]{graphics/Figure" "09.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
     (upper trace) of printer $A$ in 1200\,dpi mode with the Best option.}
     \label{figure:Figure_09}
@@ -252,39 +258,7 @@ encoded in the structure of the control signals (Figures
 signals is approximately 4--\SI{5}{\volt}. The pulse repetition frequency
 also changes depending on operating mode and the toner save option. But at
 the same time, these signals carry no information about the information being
-printed \ref{Kubiak2014c,Kuhn2004a}.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=2in]{graphics/Figure" "10.jpg}
-    \caption{Waveforms of control signals on pins 6 (lower trace) and 9
-    (upper trace) of printer $A$ for the 1200\,dpi mode and the Eco option.}
-    \label{figure:Figure_10}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=2in]{graphics/Figure" "11.jpg}
-    \caption{Waveforms of useful signals (one of the differential pairs) of
-        printer $B$ for the 1200\,dpi mode and the Best option.}
-    \label{figure:Figure_11}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=2in]{graphics/Figure" "12.jpg}
-    \caption{Waveforms of useful signals (one of the differential pairs) of
-        printer $B$ for the 1200\,dpi mode and the Eco option.}
-    \label{figure:Figure_12}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=2in]{graphics/Figure" "13.jpg}
-    \caption{Waveforms of useful signals (one of the differential pairs) of
-        printer $B$ for the 600\,dpi mode and the Best option.}
-    \label{figure:Figure_13}
-\end{figure}
+printed \cite{Kubiak2014c,Kuhn2004a}.
 
 Moreover, the amplitude of the control signals is higher than that of the
 useful signals. That could mean that control signals could be considered as a
@@ -292,20 +266,12 @@ serendipitous source of masking emissions which disturb the reception of
 sensitive emanations. This phenomenon is advantageous from an electromagnetic
 protection point of view \cite{Ulas2016a,Guerrieri2018a,Loughry2002a}.
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=2in]{graphics/Figure" "14.jpg}
-    \caption{Waveforms of useful signals (one of the differential pairs) of
-        printer $B$ for the 600\,dpi mode and the Eco option.}
-    \label{figure:Figure_14}
-\end{figure}
-
 A completely different method of control of the LED array was implemented in
 printer $B$ despite using the same xerographic technology of photosensitive
 drum. Here, some information about modes of operation and toner save option is
 visible in the useful signal. The amplitude of this signal is approximately
 \SI{250}{\milli\volt}. The amplitude is less than a tenth of similar signals
-in printer [$A$?]. Moreover, the signalling method is differential.
+in printer $A$. Moreover, the signalling method is differential.
 Figures \ref{figure:Figure_11}--\ref{figure:Figure_14} show example waveforms
 of useful signals. For these signals, the pulse repetition frequency changes
 when printing mode of operation and printout quality are changed (Table
@@ -319,7 +285,7 @@ useful signal. For printer $A$, changes to these parameters (printing mode
 and printing quality) are not reflected in the behaviour of the useful
 signal.
 
-\begin{table}[ht]
+\begin{table}[!t]
     \centering
     \begin{tabular}{|l|c|c|c|}
         \hline
@@ -343,6 +309,14 @@ signal.
     \label{table:Table_2}
 \end{table}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\oscope]{graphics/Figure" "10.jpg}
+    \caption{Waveforms of control signals on pins 6 (lower trace) and 9
+    (upper trace) of printer $A$ for the 1200\,dpi mode and the Eco option.}
+    \label{figure:Figure_10}
+\end{figure}
+
 \section{Reconstructed Images from Sensitive Emissions}
 
 Images of printed data were recreated from recorded (RF) useful signals
@@ -355,15 +329,17 @@ $$
 
 \noindent where:
 
-$B \text{ is the signal bandwidth for printing one pixel}$,
+\begin{description}
+    \item[\textbf{\textit{B}}] is the signal bandwidth for printing one pixel,
 
-$W \text{ is the width of the printing area in inches}$,
+    \item[\textbf{\textit{W}}] is the width of the printing area in inches,
 
-$L \text{ is the length of the printing area in inches}$,
+    \item[\textbf{\textit{L}}] is the length of the printing area in inches,
 
-$\text{dpi is the printing resolution in dots per inch}$, and
+    \item[dpi] is the printing resolution in dots per inch, and
 
-$t \text{ is the time to print one page}$.
+    \item[\textbf{\textit{t}}] is the time to print one page.
+\end{description}
 
 We have to know the printing parameters to reconstruct the original
 information. These parameters are: the length of printer video line (in
@@ -381,6 +357,38 @@ full reconstructed images can have very large dimensions; for example, for:
 further analyses are based on fragments of images
 \cite{Grzesiak2010a,Kubiak2015b}.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\oscope]{graphics/Figure" "11.jpg}
+    \caption{Waveforms of useful signals (one of the differential pairs) of
+        printer $B$ for the 1200\,dpi mode and the Best option.}
+    \label{figure:Figure_11}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\oscope]{graphics/Figure" "12.jpg}
+    \caption{Waveforms of useful signals (one of the differential pairs) of
+        printer $B$ for the 1200\,dpi mode and the Eco option.}
+    \label{figure:Figure_12}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\oscope]{graphics/Figure" "13.jpg}
+    \caption{Waveforms of useful signals (one of the differential pairs) of
+        printer $B$ for the 600\,dpi mode and the Best option.}
+    \label{figure:Figure_13}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\oscope]{graphics/Figure" "14.jpg}
+    \caption{Waveforms of useful signals (one of the differential pairs) of
+        printer $B$ for the 600\,dpi mode and the Eco option.}
+    \label{figure:Figure_14}
+\end{figure}
+
 Fragments of these images are presented in Figures \ref{figure:Figure_15} and
 \ref{figure:Figure_16}. The reconstructed graphic characters contained in the
 image are constructed from horizontal lines at intervals equal to the width
@@ -391,23 +399,23 @@ printer $B$.
 \begin{figure*}[ht]
     \centering
     \subfloat[]{
-        \includegraphics[width=2.3in]{graphics/Figure" "15a" "left.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "15a" "left.jpg}
         \hspace{\fill}
-        \includegraphics[width=2.3in]{graphics/Figure" "15a" "right.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "15a" "right.jpg}
         \label{figure:Figure_15a}
     }
 
     \subfloat[]{
-        \includegraphics[width=2.3in]{graphics/Figure" "15b" "left.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "15b" "left.jpg}
         \hspace{\fill}
-        \includegraphics[width=2.3in]{graphics/Figure" "15b" "right.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "15b" "right.jpg}
         \label{figure:Figure_15b}
     }
 
     \subfloat[]{
-        \includegraphics[width=2.3in]{graphics/Figure" "15c" "left.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "15c" "left.jpg}
         \hspace{\fill}
-        \includegraphics[width=2.3in]{graphics/Figure" "15c" "right.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "15c" "right.jpg}
         \label{figure:Figure_15c}
     }
 
@@ -417,33 +425,33 @@ printer $B$.
     \label{figure:Figure_15}
 \end{figure*}
 
-\begin{figure*}[ht]
+\begin{figure*}[!ht]
     \centering
     \subfloat[]{
-        \includegraphics[width=2.3in]{graphics/Figure" "16a" "left.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16a" "left.jpg}
         \hspace{\fill}
-        \includegraphics[width=2.3in]{graphics/Figure" "16a" "right.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16a" "right.jpg}
         \label{figure:Figure_16a}
     }
 
     \subfloat[]{
-        \includegraphics[width=2.3in]{graphics/Figure" "16b" "left.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16b" "left.jpg}
         \hspace{\fill}
-        \includegraphics[width=2.3in]{graphics/Figure" "16b" "right.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16b" "right.jpg}
         \label{figure:Figure_16b}
     }
 
     \subfloat[]{
-        \includegraphics[width=2.3in]{graphics/Figure" "16c" "left.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16c" "left.jpg}
         \hspace{\fill}
-        \includegraphics[width=2.3in]{graphics/Figure" "16c" "right.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16c" "right.jpg}
         \label{figure:Figure_16c}
     }
 
     \subfloat[]{
-        \includegraphics[width=2.3in]{graphics/Figure" "16d" "left.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16d" "left.jpg}
         \hspace{\fill}
-        \includegraphics[width=2.3in]{graphics/Figure" "16d" "right.jpg}
+        \includegraphics[width=\oscope]{graphics/Figure" "16d" "right.jpg}
         \label{figure:Figure_16d}
     }
 
@@ -540,22 +548,22 @@ additional control wires.
 \begin{figure*}[ht]
     \centering
     \subfloat[]{
-        ?? % \includegraphics[width=2.3in]{graphics/Figure" "20a.jpg}
+        \includegraphics[width=2.38in]{graphics/Figure" "20a.jpg}
         \label{figure:Figure_20a}
     }
     \hfil
     \subfloat[]{
-        ?? % \includegraphics[width=2.3in]{graphics/Figure" "20b.jpg}
+        \includegraphics[width=2.38in]{graphics/Figure" "20b.jpg}
         \label{figure:Figure_20b}
     }
 
     \subfloat[]{
-        ?? % \includegraphics[width=2.3in]{graphics/Figure" "20c.jpg}
+        \includegraphics[width=2.38in]{graphics/Figure" "20c.jpg}
         \label{figure:Figure_20c}
     }
     \hfil
     \subfloat[]{
-        ?? % \includegraphics[width=2.3in]{graphics/Figure" "20d.jpg}
+        \includegraphics[width=2.38in]{graphics/Figure" "20d.jpg}
         \label{figure:Figure_20d}
     }
     \caption{Fragments of reconstructed images from sensitive emissions of
@@ -570,12 +578,12 @@ additional control wires.
 \begin{figure*}[ht]
     \centering
     \subfloat[]{
-        ?? % \includegraphics[width=2.3in]{graphics/Figure" "21a.jpg}
+        \includegraphics[width=2.38in]{graphics/Figure" "21a.jpg}
         \label{figure:Figure_21a}
     }
     \hfil
     \subfloat[]{
-        ?? % \includegraphics[width=2.3in]{graphics/Figure" "21b.jpg}
+        \includegraphics[width=2.38in]{graphics/Figure" "21b.jpg}
         \label{figure:Figure_21b}
     }
     \caption{Fragments of reconstructed images from sensitive emissions of
@@ -622,7 +630,11 @@ printed data (Figure \ref{figure:Figure_22}).
 
 \begin{figure}[ht]
     \centering
-    ?? % \includegraphics[width=3in]{graphics/Figure" "22.jpg}
+    \includegraphics[width=3in]{graphics/Figure" "22" "top.jpg}
+
+    \bigskip
+
+    \includegraphics[width=\textwidth]{graphics/Figure" "22" "low.jpg}
     \caption{Printer $B$ with LED array, $600\times 600$\,dpi with toner
         save (images is inverted). Measured frequency of sensitive emission
         $f_0 = 384$\,\si{\mega\hertz}, $\text{BW}=2$\,\si{\mega\hertz}.}
@@ -648,7 +660,7 @@ That solution is advantageous to the electromagnetic eavesdropper (Figure
 
 \begin{figure}[ht]
     \centering
-    ?? % \includegraphics[width=3in]{graphics/Figure" "23.jpg}
+    \includegraphics[width=3in]{graphics/Figure" "23.jpg}
     \caption{Example of reconstructed image from sensitive emission for a
         two-diode laser printer, 660\,dpi mode with the ``Eco'' option turned
         on. Measured frequency of sensitive emission: $f_0 =
@@ -656,6 +668,49 @@ That solution is advantageous to the electromagnetic eavesdropper (Figure
         inverted.}
     \label{figure:Figure_23}
 \end{figure}
+
+\begin{table}[!ht]
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        & \multicolumn{2}{c|}{600\,dpi}
+            & \multicolumn{2}{c|}{1200\,dpi} \\
+        \hline
+        \textbf{Type of Printer} & ``Best'' & ``Eco'' & ``Best'' & ``Eco'' \\
+        \hline
+        Dual laser diode printer, Producer 1 & W1 & K1 & W1 & K1 \\
+        \hline
+        Dual laser diode printer, Producer 2 & W1 & W & K1 & W1 \\
+        \hline
+        Dual laser diode printer, Producer 3 & W1 & W1 & W1 & W1 \\
+        \hline
+        LED array printer $A$ & K2 & K2 & K2 & K2 \\
+        \hline
+        LED array printer $B$ & \textbf{W2} & \textbf{W2}
+            & \textbf{W2} & \textbf{W2} \\
+        \hline
+    \end{tabular}
+    \captionsetup{singlelinecheck=off}
+    \caption[Figure 3]{Comparison of the quality of reconstructed
+        data---depending on resolution (dpi) and the use of ``Best'' or
+        ``Eco'' options---for laser printers that use a dual diode laser
+        system or an LED array from an electromagnetic protection point of
+        view.
+
+        \medskip
+        \emph{Legend:}
+        \begin{description}
+            \item[K1] visible edges of graphic characters appear in the
+                reconstructed image, but the information is legible;
+            \item[K2] visible filled graphic characters appear in the
+                reconstructed image, but the information is not legible;
+            \item[W1] visible filled graphic characters appear in the
+                reconstructed image, and the information is legible;
+            \item[W2] graphic characters in the reconstructed image are not
+                visible, and the information is not legible.
+        \end{description}
+    }
+    \label{table:Table_3}
+\end{table}
 
 The LED array system requires parallel signal transmission. This causes
 successful reception and decoding of sensitive emissions to be very
@@ -680,49 +735,6 @@ results obtained by analysis of the $A$ and $B$ printers were compared with
 results of analogous analyses of printers using a dual diode laser system. In
 summary, the best approach to increase resistance to electromagnetic
 infiltration is the LED array system.
-
-\begin{table}[ht]
-    \begin{tabular}{|l|c|c|c|c|}
-        Type of Printer & \multicolumn{2}{c}{600\,dpi}
-            & \multicolumn{2}{c}{1200\,dpi} \\
-        \hline
-        & Best & Eco & Best & Eco \\
-        \hline
-        Laser printer with dual laser \\
-        diode system from Producer 1 & W1 & K1 & W1 & K1 \\
-        \hline
-        Laser printer with dual laser \\
-        diode system from Producer 2 & W1 & W & K1 & W1 \\
-        \hline
-        Laser printer with dual laser \\
-        diode system from Producer 3 & W1 & W1 & W1 & W1 \\
-        \hline
-        Laser printer with LED array: \\
-        $A$ & K2 & K2 & K2 & K2 \\
-        \hline
-        Laser printer with LED array: \\
-        $B$ & \textbf{W2} & \textbf{W2} & \textbf{W2} & \textbf{W2} \\
-        \hline
-    \end{tabular}
-    \caption{Quality of reconstructed data depending on printing mode and
-        the use of ``Best'' or ``Eco'' options  for laser printers with a
-        dual diode laser system or an LED array from an electromagnetic
-        protection point of view.}
-    \label{table:Table_3}
-\end{table}
-
-Legend:
-
-\begin{description}
-    \item[K1] visible edges of graphic characters in the reconstructed image,
-        information is legible;
-    \item[K2] visible filled graphic characters in the reconstructed image,
-        information is not legible;
-    \item[W1] visible filled graphic characters in the reconstruct image,
-        information is legible;
-    \item[W2] graphic characters in the reconstructed image are not visible,
-        information is not legible.
-\end{description}
 
 \singlespacing
 
