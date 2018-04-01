@@ -72,6 +72,9 @@ vi: paper
 paper:
 	$(editor) $(paper_source)
 
+touch:
+	touch $(paper_source)
+
 slides:
 	$(editor) $(slides_source)
 

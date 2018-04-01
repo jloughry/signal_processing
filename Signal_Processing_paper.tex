@@ -22,7 +22,7 @@
 \usepackage{caption} % for multi-paragraph captions, like Table 3
 
 \newlength{\oscope}
-\setlength{\oscope}{2.4in}
+\setlength{\oscope}{2.5in}
 
 \begin{document}
 
@@ -74,13 +74,13 @@ be information displayed on a computer screen or printed (Figure
 Like other devices included in a computer system \cite{Kuhn2002,Kubiak2016a},
 the printer can be subject to electromagnetic infiltration, or eavesdropping
 \cite{Ketenci2015a,Kubiak2016b}. Therefore, efforts to reduce the level of
-susceptibility to electromagnetic eavesdropping initiated for such devices.
-Organisational and technical solutions \cite{Kubiak2006a} are the most
-often-used methods for limiting infiltration
-sensitivity of devices.\footnote{An example of an organisational solution
-might be establishment of a ``control zone'' around susceptible devices,
-relying on distance to attenuate signals below levels that can be received
-outside the control zone.} Technical solutions are limited to changes in the
+susceptibility to electromagnetic eavesdropping are initiated for such
+devices. Organisational and technical solutions\footnote{An example of an
+organisational solution might be establishment of a ``control zone'' around
+susceptible devices, relying on distance to attenuate signals below levels
+that can be received outside the control zone.} are the most often-used
+methods for limiting infiltration sensitivity of devices \cite{Kubiak2006a}.
+Technical solutions are limited to changes in the
 design of devices that typically increase the cost of such devices and
 sometimes limit their functionality. Therefore, it is desirable to find
 solutions that avoid these drawbacks and at the same time allow ``safe''
@@ -89,9 +89,9 @@ processing of classified information \cite{Wasfy2011a,Goel2012a}.
 One technical method that is commonly used in the field of electromagnetic
 compatibility---both to reduce the amount of electromagnetic interference
 emitted from the device and the susceptibility of the device to
-electromagnetic disturbance---is the use of differential signals. Analysis
-of useful signals and control signals \cite{Kubiak2017d} in the operation of
-LED arrays
+electromagnetic disturbance---is the use of differential-mode signals.
+In this paper, analysis of useful signals and control signals
+\cite{Kubiak2017d} in the operation of LED arrays
 used in printers shows that such a design was used by printer $B$ in the
 operation of its photoconductor exposure system. Is this sufficient, however,
 to foil non-invasive information gathering? Research and results are
@@ -113,7 +113,7 @@ printer (Figure \ref{figure:Figure_02b}) significantly reduces the
 susceptibility of the device to infiltration, in comparison to the $A$
 printer (Figure \ref{figure:Figure_02a}). Moreover, the level of
 electromagnetic emission of printer $A$ is higher than that of
-typical single and dual diode laser printers \cite{Kubiak2014b}.
+typical single or dual diode laser printers \cite{Kubiak2014b}.
 
 \section{The Structure of the Emission Source and the Characteristics of
 Useful Signals}
@@ -300,8 +300,8 @@ signal.
         \hline
         600\,dpi Eco   & 2.07 & $-250$ & $+250$ \\
         600\,dpi Best  & 4.14 & $-250$ & $+250$ \\
-        1200\,dpi Eco  & 4,14 & $-250$ & $+250$ \\
-        1200\,dpi Best & 8,28 & $-250$ & $+250$ \\
+        1200\,dpi Eco  & 4.14 & $-250$ & $+250$ \\
+        1200\,dpi Best & 8.28 & $-250$ & $+250$ \\
         \hline
     \end{tabular}
     \caption{Parameters of useful signals from printer $B$ in relation to
@@ -390,7 +390,7 @@ further analyses are based on fragments of images
 \end{figure}
 
 Fragments of these images are presented in Figures \ref{figure:Figure_15} and
-\ref{figure:Figure_16}. The reconstructed graphic characters contained in the
+\ref{figure:Figure_16}. The reconstructed glyphs contained in the
 image are constructed from horizontal lines at intervals equal to the width
 of the line \cite{Kubiak2006a} apart from repetition frequency of the useful
 signal and option Best or Eco and for the default printing resolution of
@@ -465,7 +465,7 @@ printer $B$.
 In two-diode laser printers, a phenomenon occurs that causes the
 reconstructed images from sensitive emissions to contain only single points,
 corresponding to the beginning and endpoint of each horizontal line
-comprising the printed graphic characters (essentially run-length encoding
+comprising the printed glyphs (essentially run-length encoding
 the reconstructed images) \cite{Kubiak2014d}.
 
 However, these useful signals were not differential signals. In the case of
@@ -487,8 +487,7 @@ the levels of electromagnetic emission correlated with printed data
 fact that the amplitude of useful signals are over ten times higher than in
 the case of printer $B$. This necessarily translates into a level of
 electromagnetic emission. The number of wires carrying useful signals is half
-that of printer $B$. An anechoic chamber (Figure \ref{figure:Figure_17}) was
-used to test the validity of the assumptions.
+that of printer $B$.
 
 \begin{figure}[ht]
     \centering
@@ -497,6 +496,8 @@ used to test the validity of the assumptions.
     \label{figure:Figure_17}
 \end{figure}
 
+An anechoic chamber (Figure \ref{figure:Figure_17}) was used to test the
+validity of the assumptions.
 During the tests, sensitive emissions were measured with a bandwidth of
 \SI{1}{\mega\hertz} in the frequency range from \SI{2}{\mega\hertz} to
 \SI{1}{\giga\hertz}. This frequency range was selected as a result of many
@@ -514,8 +515,9 @@ TEMPEST computer, which is certified for electromagnetic safety.
     \label{figure:Figure_18}
 \end{figure}
 
-The reason is because a typical computer has higher levels of electromagnetic
-emissions than TEMPEST computer. These emissions can ``cover'' the target
+The reason for using the TEMPEST computer for this purpose is because a
+typical computer has higher levels of electromagnetic emissions. These
+emissions can ``cover'' the target
 emissions. When that happens, the electromagnetic infiltration process
 becomes impossible. Results of the TEMPEST measurements are shown in Figure
 \ref{figure:Figure_19}.
@@ -543,7 +545,8 @@ mode of the printer (Figures \ref{figure:Figure_20}--\ref{figure:Figure_21}).
 At the same time, the operating mode does not change the radiated
 characteristic of the emission source or the level of susceptibility to
 infiltration. In this printer, information about printout quality is sent by
-additional control wires.
+additional control wires. In this case, different printing modes generate
+control signals having different timing structures.
 
 \begin{figure*}[ht]
     \centering
@@ -594,9 +597,6 @@ additional control wires.
     \label{figure:Figure_21}
 \end{figure*}
 
-\noindent In this case, different printing modes generate control signals
-having different timing structures.
-
 As we can see, the xerographic technology of a photosensitive drum
 illuminated by LED arrays, which is used in computer printers, has
 significant characteristics from the point of view of electromagnetic
@@ -613,7 +613,8 @@ filtering, or edge detection filtering---doesn't yield satisfactory results
 Printer $B$ uses a similar xerographic exposure process comprising a
 photosensitive drum as printer $A$. However, in the structure of the original
 image, we can distinguish horizontal gaps spaced at the same interval as one
-line---the Eco option in action---which has a positive effect on the level of
+line---this is the Eco option in action---which has a positive effect on the
+level of
 loss of distinctive features of the original signal after passing through the
 side channel attack (SCA). This printer uses differential signalling, which
 feeds into the SCA a much lower amplitude original signal that is also
@@ -622,7 +623,7 @@ eavesdropping.
 
 In order to prove the conclusions above, sensitive emission signals were
 recorded, and then images reconstructed from them. Undoubtedly the image
-contains some graphic elements \cite{Jalilian2014a}. However, due to the
+contains some glyphs \cite{Jalilian2014a}. However, due to the
 elimination of a number of distinctive features caused by differential
 transmission and reduction of repetition frequency of the signal (Eco
 option), these elements prevent reading any information related to the
@@ -699,13 +700,13 @@ That solution is advantageous to the electromagnetic eavesdropper (Figure
         \medskip
         \emph{Legend:}
         \begin{description}
-            \item[K1] visible edges of graphic characters appear in the
+            \item[K1] only the edges of glyphs appear in the
                 reconstructed image, but the information is legible;
-            \item[K2] visible filled graphic characters appear in the
+            \item[K2] visible filled glyphs appear in the
                 reconstructed image, but the information is not legible;
-            \item[W1] visible filled graphic characters appear in the
+            \item[W1] visible filled glyphs appear in the
                 reconstructed image, and the information is legible;
-            \item[W2] graphic characters in the reconstructed image are not
+            \item[W2] glyphs in the reconstructed image are not
                 visible, and the information is not legible.
         \end{description}
     }
@@ -715,7 +716,7 @@ That solution is advantageous to the electromagnetic eavesdropper (Figure
 The LED array system requires parallel signal transmission. This causes
 successful reception and decoding of sensitive emissions to be very
 difficult. The reconstructed images from valuable emissions obtained from
-LED-array-based printers can be seen to contain graphical elements, but they
+LED-array-based printers can be seen to contain glyphs, but they
 aren't legible.
 
 Printer $B$ goes further by using differential signalling. This method, once
