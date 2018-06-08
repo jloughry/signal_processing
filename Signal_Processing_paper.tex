@@ -5,21 +5,24 @@
 % Joe.Loughry@cs.du.edu or mailto:Joe.Loughry@gmail.com
 %
 
-\documentclass[letterpaper]{ieeetran}
+\documentclass[letterpaper,journal]{ieeetran}
 
 \usepackage[english,british]{babel}
-\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
 
 \usepackage[obeyspaces,hyphens]{url}
 \newcommand{\URL}[1]{$\langle$\url{#1}$\rangle$}
 \usepackage[plainpages=false,pdfpagelabels]{hyperref}
 
 \usepackage{setspace} % for \doublespacing
-\usepackage{subfig} % for side-by-side subfigures
+\usepackage[caption=false,font=footnotesize]{subfig} % compatible with ieeetran
 \usepackage{combelow} % for typesetting the Romainian S-comma \cb{}
 \usepackage{authblk} % for author affiliations
 \usepackage[binary-units]{siunitx} % for typesetting values with SI units
 \usepackage{caption} % for multi-paragraph captions, like Table 3
+\usepackage{array} % recommended for use with ieeetran
+\usepackage{amsmath} % recommended for use with ieeetran
+\usepackage{cite} % recommended for use with ieeetran
 
 \newlength{\oscope}
 \setlength{\oscope}{2.5in}
@@ -28,13 +31,16 @@
 
 \title{\input{title.tex}}
 
-\author{Ireneusz Kubiak}
-\affil{Military Communication Institute, Warszawska 22A Str.,
-    05-130 Zegrze, Poland \URL{mailto:i.kubiak@wil.waw.pl}}
-\author{Joe Loughry}
-\affil{University of Denver, Ritchie School of Engineering and Computer
-    Science, 2155 East Wesley Avenue, Denver, CO 80208 USA
-    \URL{mailto:joe.loughry@cs.du.edu}}
+\author{Ireneusz Kubiak\IEEEauthorrefmark{1}
+    and Joe Loughry\IEEEauthorrefmark{2}\IEEEmembership{Member,~IEEE}%
+\thanks{\IEEEauthorrefmark{1}Military Communication Institute,
+Warszawska 22A Str., 05-130 Zegrze, Poland. Email:
+\href{mailto:i.kubiak@wil.waw.pl}{\nolinkurl{i.kubiak@wil.waw.pl}}}
+\thanks{\IEEEauthorrefmark{2}University of Denver, Ritchie School of
+Engineering and Computer Science, 2155 East Wesley Avenue, Denver, CO 80208,
+USA. Email:
+\href{mailto:joe.loughry@cs.du.edu}{\nolinkurl{joe.loughry@cs.du.edu}}}
+\thanks{Submitted to arXiv ?? June 2018; arxiv:??}}
 
 \date{}
 
@@ -49,6 +55,8 @@
 \textbf{Keywords:} LED array, laser printer, unintentional emission,
 compromising emanations, electromagnetic eavesdropping, electromagnetic
 infiltration, recognition and reconstruction, non-invasive data acquisition.
+
+\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 
@@ -169,7 +177,14 @@ printer. In the case of the 1200\,dpi mode, the frequency of signal repetition
 increases by two. The amplitude is constant at approximately \SI{3.5}{\volt}
 (Table~\ref{table:Table_1}).
 
-\begin{table}[t]
+%
+% Make all tables this way for IEEEtran.
+%
+
+\begin{table}[!t]
+    \caption{Parameters of useful signals of printer $A$ in relation to
+        printing parameters.}
+    \label{table:Table_1}
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
@@ -186,9 +201,6 @@ increases by two. The amplitude is constant at approximately \SI{3.5}{\volt}
         1200\,dpi, Best & $\sim 9.4$ & 3.5 \\
         \hline
     \end{tabular}
-    \caption{Parameters of useful signals of printer $A$ in relation to
-        printing parameters.}
-    \label{table:Table_1}
 \end{table}
 
 The structure of the signal (waveform shape and duty cycle) doesn't change.
@@ -739,7 +751,7 @@ infiltration is the LED array system.
 
 \singlespacing
 
-\bibliographystyle{unsrt}
+\bibliographystyle{IEEEtran}
 \bibliography{consolidated_bibtex_file}
 
 \end{document}
