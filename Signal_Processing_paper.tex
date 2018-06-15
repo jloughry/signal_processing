@@ -32,7 +32,7 @@
 \title{\input{title.tex}}
 
 \author{Ireneusz Kubiak\IEEEauthorrefmark{1}
-    and Joe Loughry\IEEEauthorrefmark{2}\IEEEmembership{Member,~IEEE}%
+    and Joe Loughry\IEEEauthorrefmark{2} \IEEEmembership{Member,~IEEE}%
 \thanks{\IEEEauthorrefmark{1}Military Communication Institute,
 Warszawska 22A Str., 05-130 Zegrze, Poland. Email:
 \href{mailto:i.kubiak@wil.waw.pl}{\nolinkurl{i.kubiak@wil.waw.pl}}}
@@ -297,7 +297,12 @@ useful signal. For printer $A$, changes to these parameters (printing mode
 and printing quality) are not reflected in the behaviour of the useful
 signal.
 
-\begin{table}[!t]
+% table* makes a two-column table.
+
+\begin{table*}[t]
+    \caption{Parameters of useful signals from printer $B$ in relation to
+        printing parameters.}
+    \label{table:Table_2}
     \centering
     \begin{tabular}{|l|c|c|c|}
         \hline
@@ -305,10 +310,9 @@ signal.
         \hline
         & & \multicolumn{2}{c|}{Amplitude (\si{\milli\volt})} \\
         \hline
-        Operating & PRF of Differen-
-            & First Differential & Second Differenti- \\
-        Mode & tial Signals (\si{\kilo\hertz})
-            & Pair (1, 3, 5, 7) & al Pair (2, 4, 6, 8) \\
+        Operating Mode & PRF of Differential Signals (\si{\kilo\hertz})
+            & First Differential & Second Differential \\
+          & & Pair (1, 3, 5, 7)  & Pair (2, 4, 6, 8) \\
         \hline
         600\,dpi Eco   & 2.07 & $-250$ & $+250$ \\
         600\,dpi Best  & 4.14 & $-250$ & $+250$ \\
@@ -316,10 +320,7 @@ signal.
         1200\,dpi Best & 8.28 & $-250$ & $+250$ \\
         \hline
     \end{tabular}
-    \caption{Parameters of useful signals from printer $B$ in relation to
-        printing parameters.}
-    \label{table:Table_2}
-\end{table}
+\end{table*}
 
 \begin{figure}[ht]
     \centering
@@ -682,26 +683,7 @@ That solution is advantageous to the electromagnetic eavesdropper (Figure
     \label{figure:Figure_23}
 \end{figure}
 
-\begin{table}[!ht]
-    \begin{tabular}{|l|c|c|c|c|}
-        \hline
-        & \multicolumn{2}{c|}{600\,dpi}
-            & \multicolumn{2}{c|}{1200\,dpi} \\
-        \hline
-        \textbf{Type of Printer} & ``Best'' & ``Eco'' & ``Best'' & ``Eco'' \\
-        \hline
-        Dual laser diode printer, Producer 1 & W1 & K1 & W1 & K1 \\
-        \hline
-        Dual laser diode printer, Producer 2 & W1 & W1 & K1 & W1 \\
-        \hline
-        Dual laser diode printer, Producer 3 & W1 & W1 & W1 & W1 \\
-        \hline
-        LED array printer $A$ & K2 & K2 & K2 & K2 \\
-        \hline
-        LED array printer $B$ & \textbf{W2} & \textbf{W2}
-            & \textbf{W2} & \textbf{W2} \\
-        \hline
-    \end{tabular}
+\begin{table*}[!ht]
     \captionsetup{singlelinecheck=off}
     \caption[Figure 3]{Comparison of the quality of reconstructed
         data---depending on resolution (dpi) and the use of ``Best'' or
@@ -723,7 +705,27 @@ That solution is advantageous to the electromagnetic eavesdropper (Figure
         \end{description}
     }
     \label{table:Table_3}
-\end{table}
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        & \multicolumn{2}{c|}{600\,dpi}
+            & \multicolumn{2}{c|}{1200\,dpi} \\
+        \hline
+        \textbf{Type of Printer} & ``Best'' & ``Eco'' & ``Best'' & ``Eco'' \\
+        \hline
+        Dual laser diode printer, Producer 1 & W1 & K1 & W1 & K1 \\
+        \hline
+        Dual laser diode printer, Producer 2 & W1 & W1 & K1 & W1 \\
+        \hline
+        Dual laser diode printer, Producer 3 & W1 & W1 & W1 & W1 \\
+        \hline
+        LED array printer $A$ & K2 & K2 & K2 & K2 \\
+        \hline
+        LED array printer $B$ & \textbf{W2} & \textbf{W2}
+            & \textbf{W2} & \textbf{W2} \\
+        \hline
+    \end{tabular}
+\end{table*}
 
 The LED array system requires parallel signal transmission. This causes
 successful reception and decoding of sensitive emissions to be very
