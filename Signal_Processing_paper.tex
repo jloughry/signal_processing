@@ -23,13 +23,15 @@
 \usepackage{array} % recommended for use with ieeetran
 \usepackage{amsmath} % recommended for use with ieeetran
 \usepackage{cite} % recommended for use with ieeetran
+\usepackage{datetime2}
 
 \newlength{\oscope}
 \setlength{\oscope}{0.9\columnwidth}
 
 \begin{document}
 
-\title{\input{title.tex}}
+\title{\input{title.tex} \\
+\vspace*{20pt}\normalsize\today}
 
 \author{Ireneusz Kubiak\IEEEauthorrefmark{1}
     and Joe Loughry\IEEEauthorrefmark{2} \IEEEmembership{Member,~IEEE}%
@@ -41,8 +43,6 @@ Engineering and Computer Science, 2155 East Wesley Avenue, Denver, CO 80208,
 USA. Email:
 \href{mailto:joe.loughry@cs.du.edu}{\nolinkurl{joe.loughry@cs.du.edu}}}
 \thanks{Submitted to arXiv ?? June 2018; arxiv:??}}
-
-\date{}
 
 \maketitle
 
