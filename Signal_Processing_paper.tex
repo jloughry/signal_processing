@@ -25,9 +25,6 @@
 \usepackage{cite} % recommended for use with ieeetran
 \usepackage{datetime2}
 
-\newlength{\oscope}
-\setlength{\oscope}{0.9\columnwidth}
-
 \begin{document}
 
 \title{\input{title.tex} \\
@@ -109,7 +106,7 @@ presented in this article.
     \centering
     \subfloat[Printer $A$]{\includegraphics[width=2in]{graphics/Figure" "02a.jpg}%
     \label{figure:Figure_02a}}
-    \hfil
+    \hfill
     \subfloat[Printer $B$]{\includegraphics[width=2in]{graphics/Figure" "02b.jpg}%
     \label{figure:Figure_02b}}
     \caption{Two printers, $A$ and $B$, were tested for sensitive emissions.}
@@ -138,7 +135,7 @@ useful signals (four differential pairs).
     \centering
     \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "03a.jpg}%
     \label{figure:Figure_03a}}
-    \hfil
+    \hfill
     \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "03b.jpg}%
     \label{figure:Figure_03b}}
     \caption{Ribbon cable supplying useful signals to the LED array: (a)
@@ -159,10 +156,10 @@ in the oscilloscope traces of Figures
 
 \begin{figure*}[ht]
     \centering
-    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "04a.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "04a.jpg}%
     \label{figure:Figure_04a}}
-    \hfil
-    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "04b.jpg}%
+    \hfill
+    \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "04b.jpg}%
     \label{figure:Figure_04b}}
     \caption{Waveforms of useful signals on pins 2 (lower trace) and 5
         (upper trace) of printer $A$ for: a) the 300\,dpi mode and the
@@ -211,10 +208,10 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure*}[ht]
     \centering
-    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "05a.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "05a.jpg}%
     \label{figure:Figure_05a}}
-    \hfil
-    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "05b.jpg}%
+    \hfill
+    \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "05b.jpg}%
     \label{figure:Figure_05b}}
     \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
         trace) of printer $A$ for: a) the 600\,dpi mode and the Best
@@ -224,10 +221,10 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure*}[ht]
     \centering
-    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "06a.jpg}%
+    \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "06a.jpg}%
     \label{figure:Figure_06a}}
-    \hfil
-    \subfloat[]{\includegraphics[width=\oscope]{graphics/Figure" "06b.jpg}%
+    \hfill
+    \subfloat[]{\includegraphics[width=\columnwidth]{graphics/Figure" "06b.jpg}%
     \label{figure:Figure_06b}}
     \caption{Waveforms of useful signals on pins 2 (lower trace) and 3 (upper
         trace) of printer $A$ for: a) the 1200\,dpi mode and the Best
@@ -237,7 +234,7 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "07.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "07.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
         (upper trace) of printer $A$ for the 300\,dpi mode and the Best
         option.}
@@ -246,7 +243,7 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "08.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "08.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
         (upper trace) of printer $A$ for the 300\,dpi mode and the Eco
         option.}
@@ -255,7 +252,7 @@ single and dual diode laser printers \cite{Kubiak2016b}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "09.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "09.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
     (upper trace) of printer $A$ in 1200\,dpi mode with the Best option.}
     \label{figure:Figure_09}
@@ -324,7 +321,7 @@ signal.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "10.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "10.jpg}
     \caption{Waveforms of control signals on pins 6 (lower trace) and 9
     (upper trace) of printer $A$ for the 1200\,dpi mode and the Eco option.}
     \label{figure:Figure_10}
@@ -372,7 +369,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "11.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "11.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 1200\,dpi mode and the Best option.}
     \label{figure:Figure_11}
@@ -380,7 +377,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "12.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "12.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 1200\,dpi mode and the Eco option.}
     \label{figure:Figure_12}
@@ -388,7 +385,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "13.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "13.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 600\,dpi mode and the Best option.}
     \label{figure:Figure_13}
@@ -396,7 +393,7 @@ further analyses are based on fragments of images
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\oscope]{graphics/Figure" "14.jpg}
+    \includegraphics[width=\columnwidth]{graphics/Figure" "14.jpg}
     \caption{Waveforms of useful signals (one of the differential pairs) of
         printer $B$ for the 600\,dpi mode and the Eco option.}
     \label{figure:Figure_14}
@@ -417,14 +414,14 @@ printer $B$.
         \includegraphics[width=\columnwidth]{graphics/Figure" "15a" "right.jpg}
         \label{figure:Figure_15a}
     }
-
+    \hfill
     \subfloat[]{
         \includegraphics[width=\columnwidth]{graphics/Figure" "15b" "left.jpg}
         \hspace{\fill}
         \includegraphics[width=\columnwidth]{graphics/Figure" "15b" "right.jpg}
         \label{figure:Figure_15b}
     }
-
+    \hfill
     \subfloat[]{
         \includegraphics[width=\columnwidth]{graphics/Figure" "15c" "left.jpg}
         \hspace{\fill}
@@ -446,21 +443,21 @@ printer $B$.
         \includegraphics[width=\columnwidth]{graphics/Figure" "16a" "right.jpg}
         \label{figure:Figure_16a}
     }
-
+    \hfill
     \subfloat[]{
         \includegraphics[width=\columnwidth]{graphics/Figure" "16b" "left.jpg}
         \hspace{\fill}
         \includegraphics[width=\columnwidth]{graphics/Figure" "16b" "right.jpg}
         \label{figure:Figure_16b}
     }
-
+    \hfill
     \subfloat[]{
         \includegraphics[width=\columnwidth]{graphics/Figure" "16c" "left.jpg}
         \hspace{\fill}
         \includegraphics[width=\columnwidth]{graphics/Figure" "16c" "right.jpg}
         \label{figure:Figure_16c}
     }
-
+    \hfill
     \subfloat[]{
         \includegraphics[width=\columnwidth]{graphics/Figure" "16d" "left.jpg}
         \hspace{\fill}
